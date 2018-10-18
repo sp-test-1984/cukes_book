@@ -29,14 +29,33 @@ public class Steps {
     }
 
     class Teller{
-        public void withdrawFrom(Account account, int dollars){
+        private CashSlot cashSlot;
 
+        public Teller(CashSlot cashSlot){
+            this.cashSlot = cashSlot;
+        }
+
+        public void withdrawFrom(Account account, int dollars){
+            cashSlot.dispense(dollars);
+        }
+    }
+
+    class CashSlot{
+        int contents;
+
+        public int contents() {
+            return contents;
+        }
+
+        public void dispense(int dollars){
+            this.contents = dollars;
         }
     }
 
     class KnowsMyDomain{
         private Account myAccount;
         private Teller teller;
+        private CashSlot cashSlot;
 
         public Account getMyAccount() {
             if(myAccount == null)
@@ -46,8 +65,14 @@ public class Steps {
 
         public Teller getTeller(){
             if (teller == null)
-                teller = new Teller();
+                teller = new Teller(this.getCashSlot());
             return teller;
+        }
+
+        public CashSlot getCashSlot(){
+            if(cashSlot == null)
+                cashSlot = new CashSlot();
+            return cashSlot;
         }
     }
 
@@ -59,13 +84,12 @@ public class Steps {
 
     @When("^I request \\$(\\d+)$")
     public void i_request_$(int dollars) throws Throwable {
-        Teller teller = new Teller();
+        Teller teller = new Teller(helper.getCashSlot());
         teller.withdrawFrom(helper.getMyAccount(), dollars);
     }
 
     @Then("^\\$(\\d+) should be dispensed$")
-    public void $_should_be_dispensed(int arg1) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void $_should_be_dispensed(int dollars) throws Throwable {
+        assertEquals("incorrect amount dispensed - ", dollars, helper.getCashSlot().contents());
     }
 }
