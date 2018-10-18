@@ -39,7 +39,7 @@ formatter.match({
   "location": "Steps.i_have_deposited_$_in_my_account(Money)"
 });
 formatter.result({
-  "duration": 162204241,
+  "duration": 160256055,
   "status": "passed"
 });
 formatter.match({
@@ -52,7 +52,7 @@ formatter.match({
   "location": "Steps.i_request_$(int)"
 });
 formatter.result({
-  "duration": 246959,
+  "duration": 194518,
   "status": "passed"
 });
 formatter.match({
@@ -65,7 +65,7 @@ formatter.match({
   "location": "Steps.$_should_be_dispensed(int)"
 });
 formatter.result({
-  "duration": 79177,
+  "duration": 82604,
   "status": "passed"
 });
 });
