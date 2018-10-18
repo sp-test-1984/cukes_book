@@ -10,7 +10,11 @@ import transforms.MoneyConverter;
 import static org.junit.Assert.*;
 
 public class Steps {
-    private Account myAccount;
+    private KnowsMyDomain helper;
+
+    public Steps(){
+        helper = new KnowsMyDomain();
+    }
 
     class Account {
         Money balance = new Money();
@@ -30,18 +34,33 @@ public class Steps {
         }
     }
 
+    class KnowsMyDomain{
+        private Account myAccount;
+        private Teller teller;
+
+        public Account getMyAccount() {
+            if(myAccount == null)
+                myAccount = new Account();
+            return myAccount;
+        }
+
+        public Teller getTeller(){
+            if (teller == null)
+                teller = new Teller();
+            return teller;
+        }
+    }
+
     @Given("^I have deposited \\$(\\d+\\.\\d+) in my account$")
     public void i_have_deposited_$_in_my_account(@Transform(MoneyConverter.class) Money amount) throws Throwable {
-        myAccount = new Account();
-        myAccount.deposit(amount);
-
-        assertEquals("incorrect account balance - ", amount, myAccount.getBalance());
+        helper.getMyAccount().deposit(amount);
+        assertEquals("incorrect account balance - ", amount, helper.getMyAccount().getBalance());
     }
 
     @When("^I request \\$(\\d+)$")
     public void i_request_$(int dollars) throws Throwable {
         Teller teller = new Teller();
-        teller.withdrawFrom(myAccount, dollars);
+        teller.withdrawFrom(helper.getMyAccount(), dollars);
     }
 
     @Then("^\\$(\\d+) should be dispensed$")
