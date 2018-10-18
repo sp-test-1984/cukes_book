@@ -36,10 +36,10 @@ formatter.match({
       "offset": 18
     }
   ],
-  "location": "Steps.i_have_deposited_$_in_my_account(Money)"
+  "location": "AccountSteps.i_have_deposited_$_in_my_account(Money)"
 });
 formatter.result({
-  "duration": 160256055,
+  "duration": 157172715,
   "status": "passed"
 });
 formatter.match({
@@ -49,10 +49,10 @@ formatter.match({
       "offset": 11
     }
   ],
-  "location": "Steps.i_request_$(int)"
+  "location": "TellerSteps.i_request_$(int)"
 });
 formatter.result({
-  "duration": 194518,
+  "duration": 461586,
   "status": "passed"
 });
 formatter.match({
@@ -62,10 +62,10 @@ formatter.match({
       "offset": 1
     }
   ],
-  "location": "Steps.$_should_be_dispensed(int)"
+  "location": "CashSlotSteps.$_should_be_dispensed(int)"
 });
 formatter.result({
-  "duration": 82604,
+  "duration": 243601,
   "status": "passed"
 });
 });
