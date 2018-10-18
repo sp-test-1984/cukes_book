@@ -10,6 +10,8 @@ import transforms.MoneyConverter;
 import static org.junit.Assert.*;
 
 public class Steps {
+    private Account myAccount;
+
     class Account {
         Money balance = new Money();
 
@@ -22,18 +24,24 @@ public class Steps {
         }
     }
 
+    class Teller{
+        public void withdrawFrom(Account account, int dollars){
+
+        }
+    }
+
     @Given("^I have deposited \\$(\\d+\\.\\d+) in my account$")
     public void i_have_deposited_$_in_my_account(@Transform(MoneyConverter.class) Money amount) throws Throwable {
-        Account myAccount = new Account();
+        myAccount = new Account();
         myAccount.deposit(amount);
 
         assertEquals("incorrect account balance - ", amount, myAccount.getBalance());
     }
 
     @When("^I request \\$(\\d+)$")
-    public void i_request_$(int arg1) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void i_request_$(int dollars) throws Throwable {
+        Teller teller = new Teller();
+        teller.withdrawFrom(myAccount, dollars);
     }
 
     @Then("^\\$(\\d+) should be dispensed$")

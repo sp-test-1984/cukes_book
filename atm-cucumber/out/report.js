@@ -39,7 +39,7 @@ formatter.match({
   "location": "Steps.i_have_deposited_$_in_my_account(Money)"
 });
 formatter.result({
-  "duration": 158734883,
+  "duration": 159315025,
   "status": "passed"
 });
 formatter.match({
@@ -52,9 +52,8 @@ formatter.match({
   "location": "Steps.i_request_$(int)"
 });
 formatter.result({
-  "duration": 2540666,
-  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat nicebank.Steps.i_request_$(Steps.java:36)\n\tat ✽.When I request $20(nicebank/cash_withdrawal.feature:4)\n",
-  "status": "pending"
+  "duration": 347688,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -66,6 +65,8 @@ formatter.match({
   "location": "Steps.$_should_be_dispensed(int)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 2986269,
+  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat nicebank.Steps.$_should_be_dispensed(Steps.java:50)\n\tat ✽.Then $20 should be dispensed(nicebank/cash_withdrawal.feature:5)\n",
+  "status": "pending"
 });
 });
