@@ -16,7 +16,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 3,
-  "name": "I have deposited $100.00 in my account",
+  "name": "my account has been credited with $100.00",
   "keyword": "Given "
 });
 formatter.step({
@@ -38,13 +38,13 @@ formatter.match({
   "arguments": [
     {
       "val": "100.00",
-      "offset": 18
+      "offset": 35
     }
   ],
   "location": "AccountSteps.i_have_deposited_$_in_my_account(Money)"
 });
 formatter.result({
-  "duration": 149876298,
+  "duration": 150449520,
   "status": "passed"
 });
 formatter.match({
@@ -57,7 +57,7 @@ formatter.match({
   "location": "TellerSteps.i_request_$(int)"
 });
 formatter.result({
-  "duration": 499838,
+  "duration": 361186,
   "status": "passed"
 });
 formatter.match({
@@ -70,7 +70,7 @@ formatter.match({
   "location": "CashSlotSteps.$_should_be_dispensed(int)"
 });
 formatter.result({
-  "duration": 209445,
+  "duration": 1436593,
   "status": "passed"
 });
 formatter.match({
@@ -83,7 +83,7 @@ formatter.match({
   "location": "AccountSteps.the_balance_of_my_account_should_be_$(Money)"
 });
 formatter.result({
-  "duration": 102269,
+  "duration": 81827,
   "status": "passed"
 });
 });
