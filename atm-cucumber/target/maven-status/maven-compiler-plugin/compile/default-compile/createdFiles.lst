@@ -1,3 +1,5 @@
+nicebank/AtmServer.class
+nicebank/AtmServlet.class
 nicebank/Account.class
 nicebank/Teller.class
 nicebank/Money.class

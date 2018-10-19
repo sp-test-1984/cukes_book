@@ -44,7 +44,7 @@ formatter.match({
   "location": "AccountSteps.i_have_deposited_$_in_my_account(Money)"
 });
 formatter.result({
-  "duration": 150449520,
+  "duration": 167032888,
   "status": "passed"
 });
 formatter.match({
@@ -57,7 +57,7 @@ formatter.match({
   "location": "TellerSteps.i_request_$(int)"
 });
 formatter.result({
-  "duration": 361186,
+  "duration": 492247,
   "status": "passed"
 });
 formatter.match({
@@ -70,7 +70,7 @@ formatter.match({
   "location": "CashSlotSteps.$_should_be_dispensed(int)"
 });
 formatter.result({
-  "duration": 1436593,
+  "duration": 1430604,
   "status": "passed"
 });
 formatter.match({
@@ -83,7 +83,7 @@ formatter.match({
   "location": "AccountSteps.the_balance_of_my_account_should_be_$(Money)"
 });
 formatter.result({
-  "duration": 81827,
+  "duration": 80851,
   "status": "passed"
 });
 });
