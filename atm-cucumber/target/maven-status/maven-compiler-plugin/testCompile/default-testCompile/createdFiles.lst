@@ -1,3 +1,5 @@
+nicebank/AtmUserInterface.class
+nicebank/hooks/ServerHooks.class
 nicebank/CashSlotSteps.class
 nicebank/AccountSteps.class
 nicebank/TellerSteps.class
