@@ -2,6 +2,7 @@ nicebank/AtmUserInterface.class
 nicebank/hooks/ServerHooks.class
 nicebank/CashSlotSteps.class
 nicebank/AccountSteps.class
+nicebank/hooks/WebDriverHooks.class
 nicebank/TellerSteps.class
 support/KnowsMyDomain.class
 nicebank/RunCukesTest.class

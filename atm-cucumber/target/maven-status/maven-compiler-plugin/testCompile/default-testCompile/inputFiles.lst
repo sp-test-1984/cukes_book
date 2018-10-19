@@ -1,6 +1,8 @@
-/Users/juanhernandez/cukes_book/ch07/atm-cucumber/src/test/java/nicebank/hooks/SomeTestHooks.java
+/Users/juanhernandez/cukes_book/ch07/atm-cucumber/src/test/java/nicebank/hooks/WebDriverHooks.java
 /Users/juanhernandez/cukes_book/ch07/atm-cucumber/src/test/java/transforms/MoneyConverter.java
+/Users/juanhernandez/cukes_book/ch07/atm-cucumber/src/test/java/nicebank/hooks/ServerHooks.java
 /Users/juanhernandez/cukes_book/ch07/atm-cucumber/src/test/java/support/KnowsMyDomain.java
+/Users/juanhernandez/cukes_book/ch07/atm-cucumber/src/test/java/nicebank/AtmUserInterface.java
 /Users/juanhernandez/cukes_book/ch07/atm-cucumber/src/test/java/nicebank/CashSlotSteps.java
 /Users/juanhernandez/cukes_book/ch07/atm-cucumber/src/test/java/nicebank/RunCukesTest.java
 /Users/juanhernandez/cukes_book/ch07/atm-cucumber/src/test/java/nicebank/TellerSteps.java

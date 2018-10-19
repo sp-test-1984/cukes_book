@@ -21,6 +21,7 @@ public class AtmUserInterface implements Teller {
             webDriver.findElement(By.id("Amount"))
                     .sendKeys(String.valueOf(dollars));
             webDriver.findElement(By.id("Withdraw")).click();
+            Thread.sleep(3000);
         } catch (WebDriverException e) {
             System.err.println(e.getMessage());
         } catch (InterruptedException e) {

@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 235229265,
+  "duration": 233573762,
   "status": "passed"
 });
 formatter.scenario({
@@ -48,7 +48,7 @@ formatter.match({
   "location": "AccountSteps.i_have_deposited_$_in_my_account(Money)"
 });
 formatter.result({
-  "duration": 118744267,
+  "duration": 114573928,
   "status": "passed"
 });
 formatter.match({
@@ -61,7 +61,7 @@ formatter.match({
   "location": "TellerSteps.i_request_$(int)"
 });
 formatter.result({
-  "duration": 5746480303,
+  "duration": 8827593962,
   "status": "passed"
 });
 formatter.match({
@@ -74,9 +74,8 @@ formatter.match({
   "location": "CashSlotSteps.$_should_be_dispensed(int)"
 });
 formatter.result({
-  "duration": 2249045,
-  "error_message": "java.lang.AssertionError: incorrect amount dispensed -  expected:\u003c20\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat nicebank.CashSlotSteps.$_should_be_dispensed(CashSlotSteps.java:17)\n\tat ✽.Then $20 should be dispensed(nicebank/cash_withdrawal.feature:5)\n",
-  "status": "failed"
+  "duration": 1493950,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -88,10 +87,16 @@ formatter.match({
   "location": "AccountSteps.the_balance_of_my_account_should_be_$(Money)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 79295,
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded0.png");
+formatter.after({
+  "duration": 2165434832,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 7709553,
+  "duration": 7867990,
   "status": "passed"
 });
 });
