@@ -29,6 +29,11 @@ formatter.step({
   "name": "$20 should be dispensed",
   "keyword": "Then "
 });
+formatter.step({
+  "line": 6,
+  "name": "the balance of my account  should be $80.00",
+  "keyword": "And "
+});
 formatter.match({
   "arguments": [
     {
@@ -39,7 +44,7 @@ formatter.match({
   "location": "AccountSteps.i_have_deposited_$_in_my_account(Money)"
 });
 formatter.result({
-  "duration": 153453307,
+  "duration": 152889675,
   "status": "passed"
 });
 formatter.match({
@@ -52,7 +57,7 @@ formatter.match({
   "location": "TellerSteps.i_request_$(int)"
 });
 formatter.result({
-  "duration": 414960,
+  "duration": 351770,
   "status": "passed"
 });
 formatter.match({
@@ -65,7 +70,21 @@ formatter.match({
   "location": "CashSlotSteps.$_should_be_dispensed(int)"
 });
 formatter.result({
-  "duration": 220634,
+  "duration": 161334,
   "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "80.00",
+      "offset": 38
+    }
+  ],
+  "location": "AccountSteps.the_balance_of_my_account_should_be_$(Money)"
+});
+formatter.result({
+  "duration": 1255041,
+  "error_message": "java.lang.AssertionError: incorrect account balance -  expected:\u003c$80.00\u003e but was:\u003c$100.00\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat nicebank.AccountSteps.the_balance_of_my_account_should_be_$(AccountSteps.java:27)\n\tat ✽.And the balance of my account  should be $80.00(nicebank/cash_withdrawal.feature:6)\n",
+  "status": "failed"
 });
 });
