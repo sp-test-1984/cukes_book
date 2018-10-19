@@ -60,7 +60,7 @@ public class Money {
     public Money minus(Money amount){
         int newCents = this.cents - amount.cents;
         int newDollars = this.dollars - amount.dollars;
-        if(newCents < 100){
+        if(newCents < 0){
             newCents += 100;
             newDollars--;
         }
